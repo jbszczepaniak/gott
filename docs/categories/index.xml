@@ -5,28 +5,9 @@
     <link>https://jbszczepaniak.github.io/gott/categories/</link>
     <description>Recent content in Categories on on the toilet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jbszczepaniak.github.io/gott/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Development</title>
-      <link>https://jbszczepaniak.github.io/gott/categories/Development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/categories/Development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://jbszczepaniak.github.io/gott/categories/golang/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/categories/golang/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

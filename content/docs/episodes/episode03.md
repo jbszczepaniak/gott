@@ -2,8 +2,9 @@
 title: 03 - Don't raise
 type: docs
 ---
-<p><a href="/gott/episode03.pdf">Download it here</a>.</p>
+
 # You don’t raise or throw exceptions, you return errors.
+## [get pdf here 🖨](/gott/episode03.pdf)
 There is a lot of code blocks like this in go:
 
 {{< highlight go >}}

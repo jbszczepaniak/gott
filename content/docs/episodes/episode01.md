@@ -1,5 +1,5 @@
 ---
-title: 01 - Static types without burocreacy  
+title: 01 - Static types without burocreacy
 type: docs
 ---
 
