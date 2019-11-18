@@ -18,6 +18,9 @@ languages:
     languageName: English
     weight: 1
 
+publishDir: docs
+
+
 
 params:
   # (Optional, default 6) Set how many table of contents levels to be showed on page.
