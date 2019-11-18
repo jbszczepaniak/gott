@@ -1,5 +1,5 @@
 baseURL: https://jbszczepaniak.github.io/gott/
-title: Go on the toilet
+title: on the toilet
 theme: book
 
 # Book configuration
@@ -7,7 +7,7 @@ disablePathToLower: true
 # enableGitInfo: true
 
 # Code highlight
-# pygmentsStyle: monokailight
+pygmentsStyle: monokailight
 pygmentsCodeFences: true
 
 # Multilang config
@@ -30,7 +30,7 @@ params:
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be logo.png
-  BookLogo: /logo.png
+  BookLogo: /go.svg
 
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used

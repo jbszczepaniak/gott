@@ -5,18 +5,20 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="03 - Don&#39;t raise"><meta property="og:title" content="03 - Don&#39;t raise" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+<meta property="og:description" content="Download it here.
+You don’t raise or throw exceptions, you return errors. There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.com/docs/episodes/episode03/" />
+<meta property="og:url" content="https://jbszczepaniak.github.io/gott/docs/episodes/episode03/" />
 
-<title>03 - Don&#39;t raise | Go on the toilet</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/book.min.1a42267725101834ce35443da3d9bbdee3c08b2ff6555b390bf2963b2dcda169.css" integrity="sha256-GkImdyUQGDTONUQ9o9m73uPAiy/2VVs5C/KWOy3NoWk=">
+<title>03 - Don&#39;t raise | on the toilet</title>
+<link rel="icon" href="/gott/favicon.png" type="image/x-icon">
 
 
-<script defer src="/en.search.min.bd4ac43086e87b7b5432d084355bd6b204e9d51e6e83d04a61435b4dff8d9397.js" integrity="sha256-vUrEMIboe3tUMtCENVvWsgTp1R5ug9BKYUNbTf&#43;Nk5c="></script>
+<link rel="stylesheet" href="/gott/book.min.1a42267725101834ce35443da3d9bbdee3c08b2ff6555b390bf2963b2dcda169.css" integrity="sha256-GkImdyUQGDTONUQ9o9m73uPAiy/2VVs5C/KWOy3NoWk=">
+
+
+<script defer src="/gott/en.search.min.9f53886400f323ff903796e27363dc9c005f004d17a1b21083f8cbb2542d1396.js" integrity="sha256-n1OIZADzI/&#43;QN5bic2PcnABfAE0XobIQg/jLslQtE5Y="></script>
 
 <!--
 Made with Book Theme
@@ -33,7 +35,7 @@ https://github.com/alex-shpak/hugo-book
     <aside class="book-menu fixed">
       <nav>
 <h2 class="book-brand">
-  <a href="https://example.com/"><img src="/logo.png" alt="Logo" /><span>Go on the toilet</span>
+  <a href="https://jbszczepaniak.github.io/gott/"><img src="/gott/go.svg" alt="Logo" /><span>on the toilet</span>
   </a>
 </h2>
 
@@ -86,7 +88,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode01/" >
+  <a href="/gott/docs/episodes/episode01/" >
       01 - Static types without burocreacy
   </a>
 
@@ -96,7 +98,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode02/" >
+  <a href="/gott/docs/episodes/episode02/" >
       02 - There is no finally
   </a>
 
@@ -106,7 +108,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode03/"  class="active">
+  <a href="/gott/docs/episodes/episode03/"  class="active">
       03 - Don&#39;t raise
   </a>
 
@@ -116,7 +118,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode04/" >
+  <a href="/gott/docs/episodes/episode04/" >
       04 - Kind of object-oriented
   </a>
 
@@ -126,7 +128,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode05/" >
+  <a href="/gott/docs/episodes/episode05/" >
       05 - Interfaces
   </a>
 
@@ -136,7 +138,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode06/" >
+  <a href="/gott/docs/episodes/episode06/" >
       06 - Functions
   </a>
 
@@ -146,7 +148,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode07/" >
+  <a href="/gott/docs/episodes/episode07/" >
       07 - The mascot
   </a>
 
@@ -156,7 +158,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode08/" >
+  <a href="/gott/docs/episodes/episode08/" >
       08 - Janury 2nd 2006
   </a>
 
@@ -166,7 +168,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode09/" >
+  <a href="/gott/docs/episodes/episode09/" >
       09 - Be safe
   </a>
 
@@ -176,7 +178,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode10/" >
+  <a href="/gott/docs/episodes/episode10/" >
       10 - Don&#39;t communicate by sharing memory
   </a>
 
@@ -186,7 +188,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode11/" >
+  <a href="/gott/docs/episodes/episode11/" >
       11 - Concurrency is not parallelism
   </a>
 
@@ -196,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode12/" >
+  <a href="/gott/docs/episodes/episode12/" >
       12 - Select is not only SQL thing
   </a>
 
@@ -206,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode13/" >
+  <a href="/gott/docs/episodes/episode13/" >
       13 - Functions implementing interfaces
   </a>
 
@@ -216,7 +218,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/docs/episodes/episode14/" >
+  <a href="/gott/docs/episodes/episode14/" >
       14 - TBA
   </a>
 
@@ -268,17 +270,47 @@ https://github.com/alex-shpak/hugo-book
     <div class="book-page">
       <header class="flex align-center justify-between book-header">
   <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
+    <img src="/gott/svg/menu.svg" alt="Menu" />
   </label>
   <strong>03 - Don&#39;t raise</strong>
 </header>
 
       
-<article class="markdown"><p><object data="/episode03.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode03.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode03.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+<article class="markdown">
+
+<p><p><a href="/gott/episode03.pdf">Download it here</a>.</p></p>
+
+<h1 id="you-don-t-raise-or-throw-exceptions-you-return-errors">You don’t raise or throw exceptions, you return errors.</h1>
+
+<p>There is a lot of code blocks like this in go:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75af00">fileInfo</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">Stat</span><span style="color:#111">(</span><span style="color:#75af00">filename</span><span style="color:#111">)</span>
+<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">return</span> <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Errorf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;could not stat file, err: %v&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">err</span><span style="color:#111">)</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</p>
+
+<p>In golang errors are normal variables, ​error ​type is an interface with single method ​<code>Error()</code>​. <code>​Error()</code>​ ​returns description of what happened.</p>
+
+<p>Although you can define your own errors, more frequently people just use built-in ones and use messages to describe abnormal situations.</p>
+
+<p>But If you want to check what type of error did you get, you can do it with technique called ​type assertion​:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">someFunc</span><span style="color:#111">()</span> <span style="color:#00a8c8">error</span> <span style="color:#111">{</span>
+	<span style="color:#00a8c8">return</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">SomeError</span><span style="color:#111">{}</span> <span style="color:#75715e">//Some defined earlier error
+</span><span style="color:#75715e"></span><span style="color:#111">}</span>
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+	<span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">someFunc</span><span style="color:#111">()</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">_</span><span style="color:#111">,</span> <span style="color:#75af00">ok</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">err</span><span style="color:#111">.(</span><span style="color:#f92672">*</span><span style="color:#75af00">SomeError</span><span style="color:#111">)</span>
+		<span style="color:#00a8c8">if</span> <span style="color:#75af00">ok</span> <span style="color:#111">{</span>
+			<span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;This is SomeError for sure&#34;</span><span style="color:#111">)</span>
+		<span style="color:#111">}</span>
+	<span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>If this looks confusing do not worry, we will talk about type assertions in the future!</p>
 </article>
 
       <div class="book-footer justify-between">
@@ -294,6 +326,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
+
 
   </main>
 
