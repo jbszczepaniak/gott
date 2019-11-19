@@ -10,111 +10,111 @@
     
     
     <item>
-      <title>01 - Static types without burocreacy</title>
-      <link>https://jbszczepaniak.github.io/gott/01-Static-types-without-burocreacy/</link>
+      <title>01 - static types without burocreacy</title>
+      <link>https://jbszczepaniak.github.io/gott/01-static-types-without-burocreacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/01-Static-types-without-burocreacy/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/01-static-types-without-burocreacy/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>02 - There is no finally</title>
-      <link>https://jbszczepaniak.github.io/gott/02-There-is-no-finally/</link>
+      <title>02 - there is no finally</title>
+      <link>https://jbszczepaniak.github.io/gott/02-there-is-no-finally/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/02-There-is-no-finally/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/02-there-is-no-finally/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>03 - Don&#39;t raise</title>
-      <link>https://jbszczepaniak.github.io/gott/03-Dont-raise/</link>
+      <title>03 - don&#39;t raise</title>
+      <link>https://jbszczepaniak.github.io/gott/03-dont-raise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/03-Dont-raise/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/03-dont-raise/</guid>
       <description>You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
 fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;could not stat file, err: %v&amp;#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</description>
     </item>
     
     <item>
-      <title>04 - Kind of object-oriented</title>
-      <link>https://jbszczepaniak.github.io/gott/04-Kind-of-object-oriented/</link>
+      <title>04 - Kkind of object-oriented</title>
+      <link>https://jbszczepaniak.github.io/gott/04-Kkind-of-object-oriented/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/04-Kind-of-object-oriented/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/04-Kkind-of-object-oriented/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>05 - Interfaces</title>
-      <link>https://jbszczepaniak.github.io/gott/05-Interfaces/</link>
+      <title>05 - interfaces</title>
+      <link>https://jbszczepaniak.github.io/gott/05-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/05-Interfaces/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/05-interfaces/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>06 - Functions</title>
-      <link>https://jbszczepaniak.github.io/gott/06-Functions/</link>
+      <title>06 - functions</title>
+      <link>https://jbszczepaniak.github.io/gott/06-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/06-Functions/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/06-functions/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>07 - The mascot</title>
-      <link>https://jbszczepaniak.github.io/gott/07-The-mascot/</link>
+      <title>07 - the mascot</title>
+      <link>https://jbszczepaniak.github.io/gott/07-the-mascot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/07-The-mascot/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/07-the-mascot/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>08 - Janury 2nd 2006</title>
-      <link>https://jbszczepaniak.github.io/gott/08-Janury-2nd-2006/</link>
+      <title>08 - janury 2nd 2006</title>
+      <link>https://jbszczepaniak.github.io/gott/08-janury-2nd-2006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/08-Janury-2nd-2006/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/08-janury-2nd-2006/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>09 - Be safe</title>
-      <link>https://jbszczepaniak.github.io/gott/09-Be-safe/</link>
+      <title>09 - be safe</title>
+      <link>https://jbszczepaniak.github.io/gott/09-be-safe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/09-Be-safe/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/09-be-safe/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>10 - Don&#39;t communicate by sharing memory</title>
-      <link>https://jbszczepaniak.github.io/gott/10-Dont-communicate-by-sharing-memory/</link>
+      <title>10 - do not communicate by sharing memory</title>
+      <link>https://jbszczepaniak.github.io/gott/10-do-not-communicate-by-sharing-memory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/10-Dont-communicate-by-sharing-memory/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/10-do-not-communicate-by-sharing-memory/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>11 - Concurrency is not parallelism</title>
-      <link>https://jbszczepaniak.github.io/gott/11-Concurrency-is-not-parallelism/</link>
+      <title>11 - concurrency is not parallelism</title>
+      <link>https://jbszczepaniak.github.io/gott/11-concurrency-is-not-parallelism/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/11-Concurrency-is-not-parallelism/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/11-concurrency-is-not-parallelism/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
-      <title>12 - Select is not only SQL thing</title>
-      <link>https://jbszczepaniak.github.io/gott/12-Select-is-not-only-SQL-thing/</link>
+      <title>12 - select is not only SQL thing</title>
+      <link>https://jbszczepaniak.github.io/gott/12-select-is-not-only-SQL-thing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/12-Select-is-not-only-SQL-thing/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/12-select-is-not-only-SQL-thing/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
