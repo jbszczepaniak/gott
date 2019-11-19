@@ -1,5 +1,6 @@
 ---
 title: "#03 - don't raise"
+date: 2019-01-31
 ---
 
 # You don’t raise or throw exceptions, you return errors.

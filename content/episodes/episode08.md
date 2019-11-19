@@ -1,5 +1,6 @@
 ---
 title: "#08 - janury 2nd 2006"
+date: 2019-03-06
 ---
 
 <object data="/episode08.pdf" type="application/pdf" width="700px" height="700px">

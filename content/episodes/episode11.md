@@ -1,5 +1,6 @@
 ---
 title: "#11 - concurrency is not parallelism"
+date: 2019-08-26
 ---
 
 <object data="/episode11.pdf" type="application/pdf" width="700px" height="700px">

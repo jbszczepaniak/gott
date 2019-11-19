@@ -1,6 +1,6 @@
 ---
 title: "#10 - do not communicate by sharing memory"
-
+date: 2019-08-07
 ---
 
 <object data="/episode10.pdf" type="application/pdf" width="700px" height="700px">

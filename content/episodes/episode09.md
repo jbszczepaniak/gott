@@ -1,5 +1,6 @@
 ---
 title: "#09 - be safe"
+date: 2019-03-24
 ---
 
 <object data="/episode09.pdf" type="application/pdf" width="700px" height="700px">

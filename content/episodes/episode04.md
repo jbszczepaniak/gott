@@ -1,5 +1,6 @@
 ---
 title: "#04 - kind of object-oriented"
+date: 2019-01-31
 ---
 
 <object data="/episode04.pdf" type="application/pdf" width="700px" height="700px">

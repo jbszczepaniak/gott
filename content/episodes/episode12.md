@@ -1,5 +1,6 @@
 ---
 title: "#12 - select is not only SQL thing"
+date: 2019-10-21
 ---
 
 <object data="/episode12.pdf" type="application/pdf" width="700px" height="700px">

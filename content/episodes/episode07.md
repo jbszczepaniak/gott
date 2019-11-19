@@ -1,5 +1,6 @@
 ---
 title: "#07 - the mascot"
+date: 2019-03-01
 ---
 
 <object data="/episode07.pdf" type="application/pdf" width="700px" height="700px">

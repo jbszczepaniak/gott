@@ -1,5 +1,6 @@
 ---
 title: "#13 - Functions implementing interfaces"
+date: 2019-10-22
 ---
 
 <object data="/episode13.pdf" type="application/pdf" width="700px" height="700px">

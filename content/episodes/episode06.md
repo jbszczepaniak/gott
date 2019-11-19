@@ -1,5 +1,6 @@
 ---
-title: "#06 - functions"
+title: "#06 - functions as first class"
+date: 2019-02-13
 ---
 
 <object data="/episode06.pdf" type="application/pdf" width="700px" height="700px">

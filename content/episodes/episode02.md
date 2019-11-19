@@ -1,5 +1,6 @@
 ---
 title: "#02 - there is no finally"
+date: 2019-01-31
 ---
 
 <object data="/episode02.pdf" type="application/pdf" width="700px" height="700px">

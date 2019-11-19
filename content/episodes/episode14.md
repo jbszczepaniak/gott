@@ -1,5 +1,6 @@
 ---
 title: "#14 - TBA"
+date: 2019-10-29
 ---
 
 <object data="/episode14.pdf" type="application/pdf" width="700px" height="700px">

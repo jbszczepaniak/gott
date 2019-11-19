@@ -1,5 +1,6 @@
 ---
 title: "#05 - interfaces"
+date: 2019-02-12
 ---
 
 <object data="/episode05.pdf" type="application/pdf" width="700px" height="700px">
