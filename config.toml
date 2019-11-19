@@ -1,0 +1,6 @@
+baseURL = "https://jbszczepaniak.github.io/gott/"
+languageCode = "en-us"
+title = "Go on the toilet"
+theme = "ananke"
+pygmentsStyle = "monokailight"
+background_color_class = "bg-blue"
