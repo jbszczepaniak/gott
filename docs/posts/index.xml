@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Go on the toilet</title>
+    <link>https://jbszczepaniak.github.io/gott/posts/</link>
+    <description>Recent content in Posts on Go on the toilet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jbszczepaniak.github.io/gott/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#01 - static types without burocreacy</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>#02 - there is no finally</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode02/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#03 - don&#39;t raise</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode03/</guid>
+      <description>You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;could not stat file, err: %v&amp;#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</description>
+    </item>
+    
+    <item>
+      <title>#04 - kind of object-oriented</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode04/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#05 - interfaces</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode05/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#06 - functions</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode06/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#07 - the mascot</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode07/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#08 - janury 2nd 2006</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode08/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#09 - be safe</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode09/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#10 - do not communicate by sharing memory</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode10/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#11 - concurrency is not parallelism</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode11/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#12 - select is not only SQL thing</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode12/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#13 - Functions implementing interfaces</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode13/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>#14 - TBA</title>
+      <link>https://jbszczepaniak.github.io/gott/posts/episode14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/posts/episode14/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+  </channel>
+</rss>
