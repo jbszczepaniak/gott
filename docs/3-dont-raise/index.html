@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="3 - don&#39;t raise"><meta property="og:title" content="3 - don&#39;t raise" />
+<meta property="og:description" content="You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbszczepaniak.github.io/gott/3-dont-raise/" />
+
+<title>3 - don&#39;t raise | on the toilet</title>
+<link rel="icon" href="/gott/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/gott/book.min.1a42267725101834ce35443da3d9bbdee3c08b2ff6555b390bf2963b2dcda169.css" integrity="sha256-GkImdyUQGDTONUQ9o9m73uPAiy/2VVs5C/KWOy3NoWk=">
+
+
+<script defer src="/gott/en.search.min.ad3de77db11bd11c615069c515ed739d3250f0ea13ba234d92d5ffc4432980d8.js" integrity="sha256-rT3nfbEb0RxhUGnFFe1znTJQ8OoTuiNNktX/xEMpgNg="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://jbszczepaniak.github.io/gott/"><img src="/gott/go.svg" alt="Logo" /><span>on the toilet</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li  class="book-section-flat" >
+    
+      <span>Episodes</span>
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+    
+      
+        <li>
+
+  <a href="/gott/10-do-not-communicate-by-sharing-memory/" >
+      10 - do not communicate by sharing memory
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/11-concurrency-is-not-parallelism/" >
+      11 - concurrency is not parallelism
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/12-select-is-not-only-SQL-thing/" >
+      12 - select is not only SQL thing
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/13-Functions-implementing-interfaces/" >
+      13 - Functions implementing interfaces
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/14-TBA/" >
+      14 - TBA
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/2-there-is-no-finally/" >
+      2 - there is no finally
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/3-dont-raise/"  class="active">
+      3 - don&#39;t raise
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/4-kind-of-object-oriented/" >
+      4 - kind of object-oriented
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/5-interfaces/" >
+      5 - interfaces
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/6-functions/" >
+      6 - functions
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/7-the-mascot/" >
+      7 - the mascot
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/8-janury-2nd-2006/" >
+      8 - janury 2nd 2006
+  </a>
+
+</li>
+      
+    
+      
+        <li>
+
+  <a href="/gott/9-be-safe/" >
+      9 - be safe
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/gott/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>3 - don&#39;t raise</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="you-don-t-raise-or-throw-exceptions-you-return-errors">You don’t raise or throw exceptions, you return errors.</h1>
+
+<h2 id="get-pdf-here-gott-episode03-pdf"><a href="/gott/episode03.pdf">get pdf here 🖨</a></h2>
+
+<p>There is a lot of code blocks like this in go:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75af00">fileInfo</span><span style="color:#111">,</span> <span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">Stat</span><span style="color:#111">(</span><span style="color:#75af00">filename</span><span style="color:#111">)</span>
+<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">return</span> <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Errorf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;could not stat file, err: %v&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">err</span><span style="color:#111">)</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</p>
+
+<p>In golang errors are normal variables, ​error ​type is an interface with single method ​<code>Error()</code>​. <code>​Error()</code>​ ​returns description of what happened.</p>
+
+<p>Although you can define your own errors, more frequently people just use built-in ones and use messages to describe abnormal situations.</p>
+
+<p>But If you want to check what type of error did you get, you can do it with technique called ​type assertion​:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">someFunc</span><span style="color:#111">()</span> <span style="color:#00a8c8">error</span> <span style="color:#111">{</span>
+	<span style="color:#00a8c8">return</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">SomeError</span><span style="color:#111">{}</span> <span style="color:#75715e">//Some defined earlier error
+</span><span style="color:#75715e"></span><span style="color:#111">}</span>
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+	<span style="color:#75af00">err</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">someFunc</span><span style="color:#111">()</span>
+	<span style="color:#00a8c8">if</span> <span style="color:#75af00">err</span> <span style="color:#f92672">!=</span> <span style="color:#00a8c8">nil</span> <span style="color:#111">{</span>
+		<span style="color:#75af00">_</span><span style="color:#111">,</span> <span style="color:#75af00">ok</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">err</span><span style="color:#111">.(</span><span style="color:#f92672">*</span><span style="color:#75af00">SomeError</span><span style="color:#111">)</span>
+		<span style="color:#00a8c8">if</span> <span style="color:#75af00">ok</span> <span style="color:#111">{</span>
+			<span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;This is SomeError for sure&#34;</span><span style="color:#111">)</span>
+		<span style="color:#111">}</span>
+	<span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>If this looks confusing do not worry, we will talk about type assertions in the future!</p>
+</article>
+
+      <hr>
+<p>Bathroom magazine with golang trivia, examples and patterns. Inspired by original Google’s “Testing on the Toilet”
+</p>
+      
+    </div>
+
+    
+
+
+  </main>
+
+  
+</body>
+
+</html>
