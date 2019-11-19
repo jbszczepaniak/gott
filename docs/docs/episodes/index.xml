@@ -38,11 +38,11 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;co
     </item>
     
     <item>
-      <title>04 - Kkind of object-oriented</title>
-      <link>https://jbszczepaniak.github.io/gott/04-Kkind-of-object-oriented/</link>
+      <title>04 - kind of object-oriented</title>
+      <link>https://jbszczepaniak.github.io/gott/04-kind-of-object-oriented/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/04-Kkind-of-object-oriented/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/04-kind-of-object-oriented/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
@@ -111,28 +111,28 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;co
     
     <item>
       <title>12 - select is not only SQL thing</title>
-      <link>https://jbszczepaniak.github.io/gott/12-select-is-not-only-SQL-thing/</link>
+      <link>https://jbszczepaniak.github.io/gott/12-select-is-not-only-sql-thing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/12-select-is-not-only-SQL-thing/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/12-select-is-not-only-sql-thing/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
       <title>13 - Functions implementing interfaces</title>
-      <link>https://jbszczepaniak.github.io/gott/13-Functions-implementing-interfaces/</link>
+      <link>https://jbszczepaniak.github.io/gott/13-functions-implementing-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/13-Functions-implementing-interfaces/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/13-functions-implementing-interfaces/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
       <title>14 - TBA</title>
-      <link>https://jbszczepaniak.github.io/gott/14-TBA/</link>
+      <link>https://jbszczepaniak.github.io/gott/14-tba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jbszczepaniak.github.io/gott/14-TBA/</guid>
+      <guid>https://jbszczepaniak.github.io/gott/14-tba/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
