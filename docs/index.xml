@@ -15,80 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/01-static-types-without-burocreacy/</guid>
-      <description>sfkasjlfjsalkhfkjaskl</description>
-    </item>
-    
-    <item>
-      <title>02 - there is no finally</title>
-      <link>https://jbszczepaniak.github.io/gott/02-there-is-no-finally/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/02-there-is-no-finally/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>03 - don&#39;t raise</title>
-      <link>https://jbszczepaniak.github.io/gott/03-dont-raise/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/03-dont-raise/</guid>
-      <description>You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
-fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;could not stat file, err: %v&amp;#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</description>
-    </item>
-    
-    <item>
-      <title>04 - kind of object-oriented</title>
-      <link>https://jbszczepaniak.github.io/gott/04-kind-of-object-oriented/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/04-kind-of-object-oriented/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>05 - interfaces</title>
-      <link>https://jbszczepaniak.github.io/gott/05-interfaces/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/05-interfaces/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>06 - functions</title>
-      <link>https://jbszczepaniak.github.io/gott/06-functions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/06-functions/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>07 - the mascot</title>
-      <link>https://jbszczepaniak.github.io/gott/07-the-mascot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/07-the-mascot/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>08 - janury 2nd 2006</title>
-      <link>https://jbszczepaniak.github.io/gott/08-janury-2nd-2006/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/08-janury-2nd-2006/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>09 - be safe</title>
-      <link>https://jbszczepaniak.github.io/gott/09-be-safe/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jbszczepaniak.github.io/gott/09-be-safe/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+      <description></description>
     </item>
     
     <item>
@@ -133,6 +60,79 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;co
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/14-TBA/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>2 - there is no finally</title>
+      <link>https://jbszczepaniak.github.io/gott/2-there-is-no-finally/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/2-there-is-no-finally/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>3 - don&#39;t raise</title>
+      <link>https://jbszczepaniak.github.io/gott/3-dont-raise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/3-dont-raise/</guid>
+      <description>You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;could not stat file, err: %v&amp;#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.</description>
+    </item>
+    
+    <item>
+      <title>4 - kind of object-oriented</title>
+      <link>https://jbszczepaniak.github.io/gott/4-kind-of-object-oriented/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/4-kind-of-object-oriented/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>5 - interfaces</title>
+      <link>https://jbszczepaniak.github.io/gott/5-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/5-interfaces/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>6 - functions</title>
+      <link>https://jbszczepaniak.github.io/gott/6-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/6-functions/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>7 - the mascot</title>
+      <link>https://jbszczepaniak.github.io/gott/7-the-mascot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/7-the-mascot/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>8 - janury 2nd 2006</title>
+      <link>https://jbszczepaniak.github.io/gott/8-janury-2nd-2006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/8-janury-2nd-2006/</guid>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+    </item>
+    
+    <item>
+      <title>9 - be safe</title>
+      <link>https://jbszczepaniak.github.io/gott/9-be-safe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/9-be-safe/</guid>
       <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     

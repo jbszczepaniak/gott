@@ -1,5 +1,5 @@
 ---
-title: 07 - the mascot
+title: 7 - the mascot
 type: docs
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 04 - kind of object-oriented
+title: 4 - kind of object-oriented
 type: docs
 ---
 
