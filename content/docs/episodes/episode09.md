@@ -1,5 +1,5 @@
 ---
-title: 09 - Be safe
+title: 09 - be safe
 type: docs
 ---
 

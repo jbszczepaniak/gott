@@ -1,5 +1,5 @@
 ---
-title: 10 - Don't communicate by sharing memory
+title: 10 - do not communicate by sharing memory
 type: docs
 ---
 

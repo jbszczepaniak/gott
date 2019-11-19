@@ -1,5 +1,5 @@
 ---
-title: 06 - Functions
+title: 06 - functions
 type: docs
 ---
 

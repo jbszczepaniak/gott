@@ -1,5 +1,5 @@
 ---
-title: 08 - Janury 2nd 2006
+title: 08 - janury 2nd 2006
 type: docs
 ---
 

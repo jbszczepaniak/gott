@@ -1,5 +1,5 @@
 ---
-title: 11 - Concurrency is not parallelism
+title: 11 - concurrency is not parallelism
 type: docs
 ---
 

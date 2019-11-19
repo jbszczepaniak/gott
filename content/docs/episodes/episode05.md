@@ -1,5 +1,5 @@
 ---
-title: 05 - Interfaces
+title: 05 - interfaces
 type: docs
 ---
 

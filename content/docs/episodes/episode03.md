@@ -1,5 +1,5 @@
 ---
-title: 03 - Don't raise
+title: 03 - don't raise
 type: docs
 ---
 

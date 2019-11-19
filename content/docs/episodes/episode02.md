@@ -1,5 +1,5 @@
 ---
-title: 02 - There is no finally
+title: 02 - there is no finally
 type: docs
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 12 - Select is not only SQL thing
+title: 12 - select is not only SQL thing
 type: docs
 ---
 
