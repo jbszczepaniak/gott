@@ -1,10 +1,6 @@
 ---
-title: "#07 - the mascot"
+title: "#07 - Let's talk about the mascot of go"
 date: 2019-03-01
 ---
 
-<object data="/episode07.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode07.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode07.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+## [get pdf here](/gott/episode07.pdf) 🖨

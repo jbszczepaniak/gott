@@ -1,10 +1,9 @@
 ---
-title: "#03 - don't raise"
+title: "#03 - You don’t raise or throw exceptions, you return errors"
 date: 2019-01-31
 ---
 
-# You don’t raise or throw exceptions, you return errors.
-## [get pdf here 🖨](/gott/episode03.pdf)
+## [get pdf here](/gott/episode03.pdf) 🖨
 There is a lot of code blocks like this in go:
 
 {{< highlight go >}}
