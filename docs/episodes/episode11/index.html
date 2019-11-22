@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #11 - concurrency is not parallelism</title>
+    <title>Go on the toilet  | #11 - Concurrency is not parallelism</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,29 @@
 
     
     
-    <meta property="og:title" content="#11 - concurrency is not parallelism" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#11 - Concurrency is not parallelism" />
+<meta property="og:description" content="get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
+③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode11/" />
 <meta property="article:published_time" content="2019-08-26T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-08-26T00:00:00+00:00" />
-<meta itemprop="name" content="#11 - concurrency is not parallelism">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#11 - Concurrency is not parallelism">
+<meta itemprop="description" content="get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
+③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time.">
 
 
 <meta itemprop="datePublished" content="2019-08-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-08-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="530">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#11 - concurrency is not parallelism"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#11 - Concurrency is not parallelism"/>
+<meta name="twitter:description" content="get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
+③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time."/>
 
   </head>
 
@@ -97,7 +100,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#11 - concurrency is not parallelism</h1>
+      <h1 class="f1 athelas mb1">#11 - Concurrency is not parallelism</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-08-26T00:00:00Z">August 26, 2019</time>
@@ -105,11 +108,73 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode11.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode11.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode11.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode11-pdf"><a href="/gott/episode11.pdf">get pdf here</a> 🖨</h2>
+
+<h1 id="left-side">Left side</h1>
+
+<p>① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②</p>
+
+<p>③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time. This shows that a computer with a single CPU is able to perform concurrent tasks. Concurrency is really about how your program is structured. If a human being would be able to read one page with one eye, and the second with the other we would have parallel computing. Similarly, it is easy to add parallelism to the program that is written concurrently by using more processors. →④</p>
+
+<p>⑤
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">files</span><span style="color:#111">,</span> <span style="color:#75af00">_</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">ioutil</span><span style="color:#111">.</span><span style="color:#75af00">ReadDir</span><span style="color:#111">(</span><span style="color:#d88200">&#34;.&#34;</span><span style="color:#111">)</span>
+
+    <span style="color:#75af00">thumbnailsToUpload</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">string</span><span style="color:#111">)</span>
+    <span style="color:#75af00">uploadDone</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">bool</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">go</span> <span style="color:#75af00">upload</span><span style="color:#111">(</span><span style="color:#75af00">thumbnailsToUpload</span><span style="color:#111">,</span> <span style="color:#75af00">uploadDone</span><span style="color:#111">)</span>
+
+    <span style="color:#75af00">wg</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">sync</span><span style="color:#111">.</span><span style="color:#75af00">WaitGroup</span><span style="color:#111">{}</span>
+    <span style="color:#00a8c8">for</span> <span style="color:#75af00">_</span><span style="color:#111">,</span> <span style="color:#75af00">file</span> <span style="color:#f92672">:=</span> <span style="color:#00a8c8">range</span> <span style="color:#75af00">files</span> <span style="color:#111">{</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#75af00">strings</span><span style="color:#111">.</span><span style="color:#75af00">HasSuffix</span><span style="color:#111">(</span><span style="color:#75af00">file</span><span style="color:#111">.</span><span style="color:#75af00">Name</span><span style="color:#111">(),</span> <span style="color:#d88200">&#34;.png&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+            <span style="color:#75af00">wg</span><span style="color:#111">.</span><span style="color:#75af00">Add</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+            <span style="color:#00a8c8">go</span> <span style="color:#75af00">thumbnail</span><span style="color:#111">(</span><span style="color:#75af00">file</span><span style="color:#111">.</span><span style="color:#75af00">Name</span><span style="color:#111">(),</span> <span style="color:#75af00">thumbnailsToUpload</span><span style="color:#111">,</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">wg</span><span style="color:#111">)</span>
+        <span style="color:#111">}</span>
+    <span style="color:#111">}</span>
+    <span style="color:#75715e">// Wait for all thumbnail jobs to finish.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">wg</span><span style="color:#111">.</span><span style="color:#75af00">Wait</span><span style="color:#111">()</span>
+    <span style="color:#75715e">// Close toUpload channel so that upload goroutine will
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// know when to stop iterating over toUpload channel.
+</span><span style="color:#75715e"></span>    <span style="color:#111">close</span><span style="color:#111">(</span><span style="color:#75af00">toUpload</span><span style="color:#111">)</span>
+    <span style="color:#75715e">// Wait for uploadDone channel so receive so that program
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// will now finish before launching all uploads.  
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&lt;-</span><span style="color:#75af00">uploadDone</span> 
+<span style="color:#111">}</span></code></pre></div></p>
+
+<p>Let&rsquo;s see how <code>thumbnail</code> and <code>upload</code> are defined. →⑥</p>
+
+<p>⑦ This short program leverages go asynchronous model. It uses goroutines in order to make it faster.  →⑧</p>
+
+<h1 id="right-side">Right side</h1>
+
+<p>② Did you see what just happened? You&rsquo;ve just switched a context. You&rsquo;ve just started working on different task of reading an article to the right site. ③←</p>
+
+<p>④ Let&rsquo;s think of an example of concurrent work to do that is small enough that will fit on one episode, yet realistic enough that you can relate to it. How about a thumbnailer? The idea will be to have a program that makes a thumbnail for every png file in given directory and uploads them somewhere. ⑤←</p>
+
+<p>⑥
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">thumbnail</span><span style="color:#111">(</span><span style="color:#75af00">path</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">thumbnails</span> <span style="color:#00a8c8">chan</span><span style="color:#f92672">&lt;-</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">wg</span> <span style="color:#f92672">*</span><span style="color:#75af00">sync</span><span style="color:#111">.</span><span style="color:#75af00">WaitGroup</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">defer</span> <span style="color:#75af00">wg</span><span style="color:#111">.</span><span style="color:#75af00">Done</span><span style="color:#111">()</span>
+
+    <span style="color:#75715e">// .. magic that generates smaller version of an image under `path`.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">thumbnailPath</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">resizeImg</span><span style="color:#111">(</span><span style="color:#75af00">path</span><span style="color:#111">)</span>
+
+    <span style="color:#75af00">thumbnails</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">thumbnailPath</span>
+<span style="color:#111">}</span>
+<span style="color:#75af00">Resizing</span> <span style="color:#75af00">an</span> <span style="color:#75af00">image</span> <span style="color:#75af00">is</span> <span style="color:#75af00">a</span> <span style="color:#75af00">CPU</span><span style="color:#f92672">-</span><span style="color:#75af00">bound</span> <span style="color:#75af00">task</span><span style="color:#111">.</span> 
+
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">upload</span><span style="color:#111">(</span><span style="color:#75af00">paths</span> <span style="color:#f92672">&lt;-</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">string</span><span style="color:#111">,</span> <span style="color:#75af00">done</span> <span style="color:#00a8c8">chan</span><span style="color:#f92672">&lt;-</span> <span style="color:#00a8c8">bool</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">for</span> <span style="color:#75af00">path</span> <span style="color:#f92672">:=</span> <span style="color:#00a8c8">range</span> <span style="color:#75af00">paths</span> <span style="color:#111">{</span>
+        <span style="color:#00a8c8">go</span> <span style="color:#75af00">uploadSingle</span><span style="color:#111">(</span><span style="color:#75af00">path</span><span style="color:#111">)</span>
+    <span style="color:#111">}</span>
+    <span style="color:#75af00">done</span> <span style="color:#f92672">&lt;-</span> <span style="color:#00a8c8">true</span>
+<span style="color:#111">}</span></code></pre></div>
+This one is IO-bound, it has make a remote call. ⑦←</p>
+
+<p>⑧ What is worth noting here is that this program can be run on a single core (by setting environment variable <code>GOMAXPROCS=1</code>) and we can still save time on executing upload goroutines because inside this goroutine we don&rsquo;t wait for the result of upload operation to finish (which is naive, but that&rsquo;s not the point).</p>
+
+<p>Starting from Go 1.5 Release <code>GOMAXPROCS</code> environment variable defaults to the amount of CPU cores on the machine. If we have multi-core machine (which we probably have) and if we do not change the value of <code>GOMAXPROCS</code>, thumbnail function will also gain performance because the CPU will be able to do calculations exactly at the same time for many goroutines.</p>
 <ul class="pa0">
   
 </ul>

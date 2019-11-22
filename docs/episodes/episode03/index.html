@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #03 - don&#39;t raise</title>
+    <title>Go on the toilet  | #03 - You don’t raise or throw exceptions, you return errors</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,29 +25,32 @@
 
     
     
-    <meta property="og:title" content="#03 - don&#39;t raise" />
-<meta property="og:description" content="You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
-fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on." />
+    <meta property="og:title" content="#03 - You don’t raise or throw exceptions, you return errors" />
+<meta property="og:description" content="get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.
+In golang errors are normal variables, ​error ​type is an interface with single method ​Error()​." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode03/" />
 <meta property="article:published_time" content="2019-01-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-01-31T00:00:00+00:00" />
-<meta itemprop="name" content="#03 - don&#39;t raise">
-<meta itemprop="description" content="You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
-fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.">
+<meta itemprop="name" content="#03 - You don’t raise or throw exceptions, you return errors">
+<meta itemprop="description" content="get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.
+In golang errors are normal variables, ​error ​type is an interface with single method ​Error()​.">
 
 
 <meta itemprop="datePublished" content="2019-01-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="188">
+<meta itemprop="wordCount" content="179">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#03 - don&#39;t raise"/>
-<meta name="twitter:description" content="You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
-fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on."/>
+<meta name="twitter:title" content="#03 - You don’t raise or throw exceptions, you return errors"/>
+<meta name="twitter:description" content="get pdf here 🖨 There is a lot of code blocks like this in go:
+fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.
+In golang errors are normal variables, ​error ​type is an interface with single method ​Error()​."/>
 
   </head>
 
@@ -100,7 +103,7 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could 
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#03 - don&#39;t raise</h1>
+      <h1 class="f1 athelas mb1">#03 - You don’t raise or throw exceptions, you return errors</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-01-31T00:00:00Z">January 31, 2019</time>
@@ -110,9 +113,7 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could 
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
-<h1 id="you-don-t-raise-or-throw-exceptions-you-return-errors">You don’t raise or throw exceptions, you return errors.</h1>
-
-<h2 id="get-pdf-here-gott-episode03-pdf"><a href="/gott/episode03.pdf">get pdf here 🖨</a></h2>
+<h2 id="get-pdf-here-gott-episode03-pdf"><a href="/gott/episode03.pdf">get pdf here</a> 🖨</h2>
 
 <p>There is a lot of code blocks like this in go:</p>
 

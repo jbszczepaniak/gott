@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #12 - select is not only SQL thing</title>
+    <title>Go on the toilet  | #12 - Select is not only SQL thing</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,29 @@
 
     
     
-    <meta property="og:title" content="#12 - select is not only SQL thing" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#12 - Select is not only SQL thing" />
+<meta property="og:description" content="get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
+func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode12/" />
 <meta property="article:published_time" content="2019-10-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-10-21T00:00:00+00:00" />
-<meta itemprop="name" content="#12 - select is not only SQL thing">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#12 - Select is not only SQL thing">
+<meta itemprop="description" content="get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
+func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received.">
 
 
 <meta itemprop="datePublished" content="2019-10-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-10-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="228">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#12 - select is not only SQL thing"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#12 - Select is not only SQL thing"/>
+<meta name="twitter:description" content="get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
+func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received."/>
 
   </head>
 
@@ -97,7 +100,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#12 - select is not only SQL thing</h1>
+      <h1 class="f1 athelas mb1">#12 - Select is not only SQL thing</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-10-21T00:00:00Z">October 21, 2019</time>
@@ -105,11 +108,43 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode12.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode12.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode12.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode12-pdf"><a href="/gott/episode12.pdf">get pdf here</a> 🖨</h2>
+
+<p>The <code>select</code> statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
+    <span style="color:#75af00">ch2</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#111">}()</span> <span style="color:#75715e">// sending on separate goroutine to avoid deadlock
+</span><span style="color:#75715e"></span>
+    <span style="color:#00a8c8">select</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">case</span> <span style="color:#75af00">v</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">:</span>
+        <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;received %d on channel 1&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">v</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">case</span> <span style="color:#75af00">v</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch2</span><span style="color:#111">:</span>
+        <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;received %d on channel 2&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">v</span><span style="color:#111">)</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>This piece of code executes only the first <code>case</code> statement because only the first channel has something that can be received. In scenarios where at the execution time, <code>select</code> statement receives values on multiple channels simultaneously, the <code>case</code> statement will be selected randomly. The example above may not look complex, neither impressive, so let&rsquo;s have a look at something more useful. The <code>select</code> enables us to build a simple timeout mechanism.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+        <span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Sleep</span><span style="color:#111">(</span><span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> <span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Second</span><span style="color:#111">)</span>
+        <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#111">}()</span>
+
+    <span style="color:#00a8c8">select</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">case</span> <span style="color:#75af00">v</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">:</span>
+        <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;received %d on channel&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">v</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">After</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> <span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Second</span><span style="color:#111">):</span>
+        <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Printf</span><span style="color:#111">(</span><span style="color:#d88200">&#34;timed out&#34;</span><span style="color:#111">)</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>In order to understand this example you need to know that <code>time.After</code> returns a channel, which yields after time specified in the parameter. Since we send to the channel <code>ch</code> after 5 seconds, first case will never execute, because after 1 second, second case will run.</p>
 <ul class="pa0">
   
 </ul>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #04 - kind of object-oriented</title>
+    <title>Go on the toilet  | #04 - Go is kind of object-oriented.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,29 @@
 
     
     
-    <meta property="og:title" content="#04 - kind of object-oriented" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#04 - Go is kind of object-oriented." />
+<meta property="og:description" content="get pdf here 🖨 type HealthCheck struct { Interval time.Duration Healthy bool } func (hc HealthCheck) isHealthy() bool { return hc.Healthy } Above you have what you could call a class. It is a struct though with function defined on it.
+check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;HealthCheck{1*time.Second, true} Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode04/" />
 <meta property="article:published_time" content="2019-01-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-01-31T00:00:00+00:00" />
-<meta itemprop="name" content="#04 - kind of object-oriented">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#04 - Go is kind of object-oriented.">
+<meta itemprop="description" content="get pdf here 🖨 type HealthCheck struct { Interval time.Duration Healthy bool } func (hc HealthCheck) isHealthy() bool { return hc.Healthy } Above you have what you could call a class. It is a struct though with function defined on it.
+check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;HealthCheck{1*time.Second, true} Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages.">
 
 
 <meta itemprop="datePublished" content="2019-01-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="202">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#04 - kind of object-oriented"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#04 - Go is kind of object-oriented."/>
+<meta name="twitter:description" content="get pdf here 🖨 type HealthCheck struct { Interval time.Duration Healthy bool } func (hc HealthCheck) isHealthy() bool { return hc.Healthy } Above you have what you could call a class. It is a struct though with function defined on it.
+check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;HealthCheck{1*time.Second, true} Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages."/>
 
   </head>
 
@@ -97,7 +100,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#04 - kind of object-oriented</h1>
+      <h1 class="f1 athelas mb1">#04 - Go is kind of object-oriented.</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-01-31T00:00:00Z">January 31, 2019</time>
@@ -105,11 +108,36 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode04.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode04.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode04.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode04-pdf"><a href="/gott/episode04.pdf">get pdf here</a> 🖨</h2>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">type</span> <span style="color:#75af00">HealthCheck</span> <span style="color:#00a8c8">struct</span> <span style="color:#111">{</span>
+  <span style="color:#75af00">Interval</span>   <span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Duration</span>
+  <span style="color:#75af00">Healthy</span>    <span style="color:#00a8c8">bool</span>
+<span style="color:#111">}</span>
+<span style="color:#00a8c8">func</span> <span style="color:#111">(</span><span style="color:#75af00">hc</span> <span style="color:#75af00">HealthCheck</span><span style="color:#111">)</span> <span style="color:#75af00">isHealthy</span><span style="color:#111">()</span> <span style="color:#00a8c8">bool</span> <span style="color:#111">{</span>
+  <span style="color:#00a8c8">return</span> <span style="color:#75af00">hc</span><span style="color:#111">.</span><span style="color:#75af00">Healthy</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>Above you have what you could call a class. It is a struct though with function defined on it.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75af00">check</span> <span style="color:#f92672">:=</span> <span style="color:#75af00">HealthCheck</span><span style="color:#111">{</span>
+  <span style="color:#75af00">Interval</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Second</span><span style="color:#111">,</span>
+  <span style="color:#75af00">Healthy</span><span style="color:#111">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+<span style="color:#111">}</span>
+<span style="color:#75af00">check2</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#75af00">HealthCheck</span><span style="color:#111">{</span><span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#75af00">time</span><span style="color:#111">.</span><span style="color:#75af00">Second</span><span style="color:#111">,</span> <span style="color:#00a8c8">true</span><span style="color:#111">}</span></code></pre></div>
+
+<p>Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages. Above there are two definitions. First is more verbose (it is called field:value initialization), in the second initialization is implicit (value) initialization.</p>
+
+<p>There is also ampersand (&amp;) symbol. It means that <code>check</code> is of type <code>HealthCheck</code> and <code>check2</code> is of type “pointer to <code>HealthCheck</code>”. It matters a lot, but let’s not go into the details today. I will just say that you don’t have to care about pointers when accessing fields/functions:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75af00">check</span><span style="color:#111">.</span><span style="color:#75af00">isHealthy</span><span style="color:#111">()</span>  <span style="color:#75715e">// this gives true
+</span><span style="color:#75715e"></span><span style="color:#75af00">check</span><span style="color:#111">.</span><span style="color:#75af00">Healthy</span>      <span style="color:#75715e">// this also gives true
+</span><span style="color:#75715e"></span><span style="color:#75af00">check2</span><span style="color:#111">.</span><span style="color:#75af00">isHealthy</span><span style="color:#111">()</span> <span style="color:#75715e">// gives also true
+</span><span style="color:#75715e"></span><span style="color:#75af00">check2</span><span style="color:#111">.</span><span style="color:#75af00">Healthy</span>     <span style="color:#f92672">//</span> <span style="color:#75af00">surprise</span><span style="color:#111">,</span> <span style="color:#75af00">surprise</span> <span style="color:#75af00">it</span> <span style="color:#75af00">gives</span> <span style="color:#00a8c8">true</span></code></pre></div>
+
+<p>By the way did you know that there is no private/public keywords in go? If struct/function/variable starts with capital letter, you can use it outside of the package, if not - you can’t! <code>¯\_(ツ)_/¯</code></p>
 <ul class="pa0">
   
 </ul>

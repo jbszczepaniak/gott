@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/" />
 
-<meta property="og:updated_time" content="2019-10-29T00:00:00+00:00" />
+<meta property="og:updated_time" content="2019-10-22T00:00:00+00:00" />
 <meta itemprop="name" content="Episodes">
 <meta itemprop="description" content="">
 
@@ -97,27 +97,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
-      <a href="https://jbszczepaniak.github.io/gott/episodes/episode14/" class="link black dim">
-        #14 - TBA
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Episodes</span>
-    <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode13/" class="link black dim">
-        #13 - Functions implementing interfaces
+        #13 - About functions implementing interfaces
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 It is commonly known that struct types can implement interfaces, but did you know that any type can implement an interface?
+An interface used when working with HTTP servers is Handler. It has one method ServeHTTP and every struct implementing this interface can be registered as a handler for incoming HTTP requests. This is simple implementation of Handler interface.
+type helloServer struct{} func (s helloServer) ServeHTTP(w http.
     </div>
   </div>
 </div>
@@ -128,11 +115,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode12/" class="link black dim">
-        #12 - select is not only SQL thing
+        #12 - Select is not only SQL thing
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
+func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received.
     </div>
   </div>
 </div>
@@ -143,11 +131,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode11/" class="link black dim">
-        #11 - concurrency is not parallelism
+        #11 - Concurrency is not parallelism
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
+③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time.
     </div>
   </div>
 </div>
@@ -158,11 +147,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode10/" class="link black dim">
-        #10 - do not communicate by sharing memory
+        #10 - Do not communicate by sharing memory; instead, share memory by communicating
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
+Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time.
     </div>
   </div>
 </div>
@@ -173,11 +163,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode09/" class="link black dim">
-        #09 - be safe
+        #09 - Golang wants you to be safe
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 One of the most powerful features of go is it&rsquo;s concurrency model built around goroutines and channels. Goroutine is a lightweight thread managed by the Go runtime. Channel enables unidirectional communication between goroutines. If you want to know more about channels and goroutines, stay tuned - in upcoming episodes we will take a closer look at them.
+One of the problems with concurrent programming is a data race.
     </div>
   </div>
 </div>
@@ -188,11 +179,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode08/" class="link black dim">
-        #08 - janury 2nd 2006
+        #08 - Do you remember January 2nd, 2006?
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 I don&rsquo;t, but golang certainly cares about it. Let&rsquo;s say you want to convert a string to Time struct. You want to figure out how, you open your terminal and type $ go doc time parse, and this is what you get:
+func Parse(layout, value string) (Time, error) Parse parses a formatted string and returns the time value it represents. The layout defines the format by showing how the reference time, defined to be Mon Jan 2 15:04:05 -0700 MST 2006 would be interpreted if it were the value; .
     </div>
   </div>
 </div>
@@ -203,11 +195,11 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode07/" class="link black dim">
-        #07 - the mascot
+        #07 - Let&#39;s talk about the mascot of go
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+       get pdf here 🖨 
     </div>
   </div>
 </div>
@@ -218,11 +210,12 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode06/" class="link black dim">
-        #06 - functions as first class
+        #06 - Functions are first-class citizens.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
+func logged(f func(int) int) func(int) int { return func(i int) int { fmt.
     </div>
   </div>
 </div>
@@ -233,11 +226,31 @@
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode05/" class="link black dim">
-        #05 - interfaces
+        #05 - Are there interfaces in go?
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 Sure, let’s look at one:
+type Writer interface { Write(p []byte) (n int, err error) } This is Writer type from standard library (from io package). If you want to implement such interface, you need to have struct with function Write defined on this struct.
+Let’s write some dummy implementation of this interface.
+type DummyWriter struct {} func (dw DummyWriter) Write (p []byte) (int, error) { return 0, nil } Here we have completely valid and extremely useless Writer implementation.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Episodes</span>
+    <h1 class="f3 near-black">
+      <a href="https://jbszczepaniak.github.io/gott/episodes/episode02/" class="link black dim">
+        #02 - There is no finally. In go you defer stuff.
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
+Examples from Docker project:
+defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d.
     </div>
   </div>
 </div>

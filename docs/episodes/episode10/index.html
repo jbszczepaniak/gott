@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #10 - do not communicate by sharing memory</title>
+    <title>Go on the toilet  | #10 - Do not communicate by sharing memory; instead, share memory by communicating</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,29 @@
 
     
     
-    <meta property="og:title" content="#10 - do not communicate by sharing memory" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating" />
+<meta property="og:description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
+Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode10/" />
 <meta property="article:published_time" content="2019-08-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-08-07T00:00:00+00:00" />
-<meta itemprop="name" content="#10 - do not communicate by sharing memory">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating">
+<meta itemprop="description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
+Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time.">
 
 
 <meta itemprop="datePublished" content="2019-08-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-08-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="447">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#10 - do not communicate by sharing memory"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating"/>
+<meta name="twitter:description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
+Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time."/>
 
   </head>
 
@@ -97,7 +100,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#10 - do not communicate by sharing memory</h1>
+      <h1 class="f1 athelas mb1">#10 - Do not communicate by sharing memory; instead, share memory by communicating</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-08-07T00:00:00Z">August 7, 2019</time>
@@ -105,11 +108,36 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode10.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode10.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode10.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode10-pdf"><a href="/gott/episode10.pdf">get pdf here</a> 🖨</h2>
+
+<p>This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.</p>
+
+<p>Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time. It turns out we can do better. We can share memory by communicating. &ldquo;Why is it better?&rdquo; you may ask. If you&rsquo;ll think why you need a lock to protect a variable in the first place - the answer is - because it can get changed from many goroutines concurrently. This is where you might end up with data race.
+If a variable is used only in one goroutine there is no possibility to have data races at all because single variable is changed in single goroutine. This is simple, yet powerful insight.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
+        <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#111">}()</span>
+    <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">)</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>How do we communicate then? With <strong>channels</strong>!
+Let&rsquo;s have a look at example! Channels are created by calling <code>make</code> function with <code>chan</code> keyword and type for which channel is created. We&rsquo;ve created channel for integers, which means that this channel can convey integer values between goroutines. If you want to send something to channel you use arrow pointing from value to a channel. In the example <code>ch &lt;- 1</code> means <em>&ldquo;send 1 to the channel ch&rdquo;</em>. What is important is that sending to the channel blocks execution of a goroutine. It is blocked as long as someone will receive from the channel from another goroutine. Receiving from the channel is done also with the arrow but pointing from channel, not to it. Receiving operation also blocks execution of goroutine until other goroutine will send to it.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
+    <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
+        <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#111">}()</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>To illustrate it let&rsquo;s change order of channel operations and try to run it. What will happen is that runtime will exit with <strong>fatal error: all goroutines are asleep - deadlock</strong>! This happens because when main goroutine encounters receive operation it blocks forever. This is important piece of information for us because now we know that channels are not only used to convey values between goroutines - they are crucial for synchronization between code which concurrently runs in many goroutines.
+This episode just scratched the surface of beautiful go concurrency model. Next time we will explore another type of channels! Stay tuned!</p>
 <ul class="pa0">
   
 </ul>

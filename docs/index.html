@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/" />
 
-<meta property="og:updated_time" content="2019-10-29T00:00:00+00:00" />
+<meta property="og:updated_time" content="2019-10-22T00:00:00+00:00" />
 <meta itemprop="name" content="Go on the toilet">
 <meta itemprop="description" content="">
 
@@ -123,36 +123,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://jbszczepaniak.github.io/gott/episodes/episode14/" class="color-inherit dim link">
-            #14 - TBA
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-        </div>
-          <a href="https://jbszczepaniak.github.io/gott/episodes/episode14/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://jbszczepaniak.github.io/gott/episodes/episode13/" class="color-inherit dim link">
-            #13 - Functions implementing interfaces
+            #13 - About functions implementing interfaces
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+          get pdf here 🖨 It is commonly known that struct types can implement interfaces, but did you know that any type can implement an interface?
+An interface used when working with HTTP servers is Handler. It has one method ServeHTTP and every struct implementing this interface can be registered as a handler for incoming HTTP requests. This is simple implementation of Handler interface.
+type helloServer struct{} func (s helloServer) ServeHTTP(w http.
         </div>
           <a href="https://jbszczepaniak.github.io/gott/episodes/episode13/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -172,13 +150,39 @@
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://jbszczepaniak.github.io/gott/episodes/episode12/" class="color-inherit dim link">
-            #12 - select is not only SQL thing
+            #12 - Select is not only SQL thing
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+          get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
+func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received.
         </div>
           <a href="https://jbszczepaniak.github.io/gott/episodes/episode12/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://jbszczepaniak.github.io/gott/episodes/episode11/" class="color-inherit dim link">
+            #11 - Concurrency is not parallelism
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
+③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time.
+        </div>
+          <a href="https://jbszczepaniak.github.io/gott/episodes/episode11/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -195,26 +199,26 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://jbszczepaniak.github.io/gott/episodes/episode11/" class="link black dim">
-              #11 - concurrency is not parallelism
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://jbszczepaniak.github.io/gott/episodes/episode10/" class="link black dim">
-              #10 - do not communicate by sharing memory
+              #10 - Do not communicate by sharing memory; instead, share memory by communicating
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://jbszczepaniak.github.io/gott/episodes/episode09/" class="link black dim">
-              #09 - be safe
+              #09 - Golang wants you to be safe
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://jbszczepaniak.github.io/gott/episodes/episode08/" class="link black dim">
-              #08 - janury 2nd 2006
+              #08 - Do you remember January 2nd, 2006?
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://jbszczepaniak.github.io/gott/episodes/episode07/" class="link black dim">
+              #07 - Let&#39;s talk about the mascot of go
             </a>
           </h2>
         

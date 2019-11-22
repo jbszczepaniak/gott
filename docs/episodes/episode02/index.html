@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #02 - there is no finally</title>
+    <title>Go on the toilet  | #02 - There is no finally. In go you defer stuff.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,32 @@
 
     
     
-    <meta property="og:title" content="#02 - there is no finally" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#02 - There is no finally. In go you defer stuff." />
+<meta property="og:description" content="get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
+Examples from Docker project:
+defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode02/" />
 <meta property="article:published_time" content="2019-01-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-01-31T00:00:00+00:00" />
-<meta itemprop="name" content="#02 - there is no finally">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#02 - There is no finally. In go you defer stuff.">
+<meta itemprop="description" content="get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
+Examples from Docker project:
+defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d.">
 
 
 <meta itemprop="datePublished" content="2019-01-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="129">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#02 - there is no finally"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#02 - There is no finally. In go you defer stuff."/>
+<meta name="twitter:description" content="get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
+Examples from Docker project:
+defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d."/>
 
   </head>
 
@@ -97,7 +103,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#02 - there is no finally</h1>
+      <h1 class="f1 athelas mb1">#02 - There is no finally. In go you defer stuff.</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-01-31T00:00:00Z">January 31, 2019</time>
@@ -105,11 +111,33 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode02.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode02.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode02.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode02-pdf"><a href="/gott/episode02.pdf">get pdf here</a> 🖨</h2>
+
+<p>If you want to make sure that something will happen, in go you can use <code>defer</code>. Statement marked with defer will be called at the end of enclosing function.</p>
+
+<p>Examples from Docker project:</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">defer</span> <span style="color:#75af00">os</span><span style="color:#111">.</span><span style="color:#75af00">RemoveAll</span><span style="color:#111">(</span><span style="color:#75af00">tmp</span><span style="color:#111">)</span> <span style="color:#75715e">// inside test as clean-up step
+</span><span style="color:#75715e"></span>
+<span style="color:#00a8c8">defer</span> <span style="color:#75af00">ls</span><span style="color:#111">.</span><span style="color:#75af00">mountL</span><span style="color:#111">.</span><span style="color:#75af00">Unlock</span><span style="color:#111">()</span> <span style="color:#75715e">// make sure to release acquired lock
+</span><span style="color:#75715e"></span>
+<span style="color:#00a8c8">defer</span> <span style="color:#75af00">f</span><span style="color:#111">.</span><span style="color:#75af00">Close</span><span style="color:#111">()</span> <span style="color:#75715e">// close file after reading content
+</span><span style="color:#75715e"></span>
+<span style="color:#00a8c8">defer</span> <span style="color:#75af00">body</span><span style="color:#111">.</span><span style="color:#75af00">Close</span><span style="color:#111">()</span> <span style="color:#75715e">// close HTTP response body after reading content
+</span><span style="color:#75715e"></span>
+<span style="color:#00a8c8">defer</span> <span style="color:#75af00">d</span><span style="color:#111">.</span><span style="color:#75af00">Stop</span><span style="color:#111">()</span> <span style="color:#f92672">//</span> <span style="color:#75af00">stop</span> <span style="color:#75af00">a</span> <span style="color:#75af00">daemon</span> </code></pre></div>
+
+<p>Very often defer is used at the beginning of the function, which is very different from usage of finally in other languages (again example from Docker):</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#111">(</span><span style="color:#75af00">ps</span> <span style="color:#f92672">*</span><span style="color:#75af00">Store</span><span style="color:#111">)</span> <span style="color:#75af00">GetV2Plugin</span><span style="color:#111">(</span><span style="color:#75af00">refOrID</span> <span style="color:#00a8c8">string</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#f92672">*</span><span style="color:#75af00">v2</span><span style="color:#111">.</span><span style="color:#75af00">Plugin</span><span style="color:#111">,</span> <span style="color:#00a8c8">error</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+  <span style="color:#75af00">ps</span><span style="color:#111">.</span><span style="color:#75af00">RLock</span><span style="color:#111">()</span>
+  <span style="color:#00a8c8">defer</span> <span style="color:#75af00">ps</span><span style="color:#111">.</span><span style="color:#75af00">RUnlock</span><span style="color:#111">()</span>
+  <span style="color:#960050;background-color:#1e0010">…</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>Since <code>Runlcok()</code> is deferred, it will for sure happen at the end.</p>
 <ul class="pa0">
   
 </ul>

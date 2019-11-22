@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #06 - functions as first class</title>
+    <title>Go on the toilet  | #06 - Functions are first-class citizens.</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,29 @@
 
     
     
-    <meta property="og:title" content="#06 - functions as first class" />
-<meta property="og:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF." />
+    <meta property="og:title" content="#06 - Functions are first-class citizens." />
+<meta property="og:description" content="get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
+func logged(f func(int) int) func(int) int { return func(i int) int { fmt." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode06/" />
 <meta property="article:published_time" content="2019-02-13T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-02-13T00:00:00+00:00" />
-<meta itemprop="name" content="#06 - functions as first class">
-<meta itemprop="description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF.">
+<meta itemprop="name" content="#06 - Functions are first-class citizens.">
+<meta itemprop="description" content="get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
+func logged(f func(int) int) func(int) int { return func(i int) int { fmt.">
 
 
 <meta itemprop="datePublished" content="2019-02-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-02-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="204">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#06 - functions as first class"/>
-<meta name="twitter:description" content="This browser does not support PDFs. Please download the PDF to view it: Download PDF."/>
+<meta name="twitter:title" content="#06 - Functions are first-class citizens."/>
+<meta name="twitter:description" content="get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
+func logged(f func(int) int) func(int) int { return func(i int) int { fmt."/>
 
   </head>
 
@@ -97,7 +100,7 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#06 - functions as first class</h1>
+      <h1 class="f1 athelas mb1">#06 - Functions are first-class citizens.</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-02-13T00:00:00Z">February 13, 2019</time>
@@ -105,11 +108,36 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><object data="/episode06.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="/episode06.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/episode06.pdf">Download PDF</a>.</p>
-    </embed>
-</object></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="get-pdf-here-gott-episode06-pdf"><a href="/gott/episode06.pdf">get pdf here</a> 🖨</h2>
+
+<p>This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the <em>decorator pattern</em>. Here is one that logs the fact that function started and finished.</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">logged</span><span style="color:#111">(</span><span style="color:#75af00">f</span> <span style="color:#00a8c8">func</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span><span style="color:#111">)</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span> <span style="color:#00a8c8">func</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span><span style="color:#111">)</span> <span style="color:#00a8c8">int</span> <span style="color:#111">{</span> 
+  <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">func</span><span style="color:#111">(</span><span style="color:#75af00">i</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span> <span style="color:#00a8c8">int</span> <span style="color:#111">{</span>
+    <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;start&#34;</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">defer</span> <span style="color:#00a8c8">func</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;finish&#34;</span><span style="color:#111">)</span> <span style="color:#111">}()</span>
+    <span style="color:#00a8c8">return</span> <span style="color:#75af00">f</span><span style="color:#111">(</span><span style="color:#75af00">i</span><span style="color:#111">)</span>
+  <span style="color:#111">}</span>
+<span style="color:#111">}</span></code></pre></div>
+
+<p>Another characteristic of being first-class citizen is also visible in the code above. The function that we return is anonymous function - it doesn&rsquo;t have a name and we don&rsquo;t care about it. Now, how would you use such decorator?</p>
+
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">square</span> <span style="color:#111">(</span><span style="color:#00a8c8">int</span><span style="color:#111">)</span> <span style="color:#00a8c8">int</span> <span style="color:#111">{</span>
+  <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#d88200">&#34;squaring: &#34;</span><span style="color:#111">,</span> <span style="color:#75af00">i</span><span style="color:#111">)</span>
+  <span style="color:#00a8c8">return</span> <span style="color:#75af00">i</span> <span style="color:#f92672">*</span> <span style="color:#75af00">i</span>
+<span style="color:#111">}</span>
+<span style="color:#00a8c8">var</span> <span style="color:#75af00">loggedSquare</span> <span style="color:#111">=</span> <span style="color:#75af00">logged</span><span style="color:#111">(</span><span style="color:#75af00">square</span><span style="color:#111">)</span>
+
+<span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
+  <span style="color:#75af00">loggedSquare</span><span style="color:#111">(</span><span style="color:#ae81ff">7</span><span style="color:#111">)</span>
+<span style="color:#111">}</span>
+<span style="color:#75715e">// start
+</span><span style="color:#75715e">// squaring:  7
+</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> <span style="color:#75af00">finish</span></code></pre></div>
+
+<p>Decorator works just as expected - we are able to do something before and after function call. Example above seems irrelevant but it shows the mechanics of the pattern itself. Instead we could time how long function was executing or implement a backoff mechanism. Also we observed that function can be assigned to a variable.</p>
 <ul class="pa0">
   
 </ul>

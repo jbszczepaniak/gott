@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/" />
 
-<meta property="og:updated_time" content="2019-10-29T00:00:00+00:00" />
+<meta property="og:updated_time" content="2019-10-22T00:00:00+00:00" />
 <meta itemprop="name" content="Episodes">
 <meta itemprop="description" content="">
 
@@ -97,28 +97,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
-      <a href="https://jbszczepaniak.github.io/gott/episodes/episode02/" class="link black dim">
-        #02 - there is no finally
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Episodes</span>
-    <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode03/" class="link black dim">
-        #03 - don&#39;t raise
+        #03 - You don’t raise or throw exceptions, you return errors
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      You don’t raise or throw exceptions, you return errors. get pdf here 🖨 There is a lot of code blocks like this in go:
+      get pdf here 🖨 There is a lot of code blocks like this in go:
 fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could not stat file, err: %v&#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.
+In golang errors are normal variables, ​error ​type is an interface with single method ​Error()​.
     </div>
   </div>
 </div>
@@ -129,11 +115,12 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could 
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode04/" class="link black dim">
-        #04 - kind of object-oriented
+        #04 - Go is kind of object-oriented.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      get pdf here 🖨 type HealthCheck struct { Interval time.Duration Healthy bool } func (hc HealthCheck) isHealthy() bool { return hc.Healthy } Above you have what you could call a class. It is a struct though with function defined on it.
+check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;HealthCheck{1*time.Second, true} Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages.
     </div>
   </div>
 </div>
@@ -144,11 +131,11 @@ fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&#34;could 
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode01/" class="link black dim">
-        #01 - static types without burocreacy
+        #01 - Go gives you static types without bureaucracy!
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
+      get pdf here 🖨 package main func main() { var i int = 1 // you can declare a variable with type  var j = 2 // but you don’t have to, compiler will know  var x, y, z = &#34;three&#34;, &#34;at&#34;, &#34;once&#34; // you can initialize many variables at a time  // Most probably you will not frequently use var keyword.  simplestInt := 3 simplestString := &#34;hey!
     </div>
   </div>
 </div>
