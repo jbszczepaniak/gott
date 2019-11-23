@@ -1,7 +1,6 @@
 ---
 title: "#15 - Looping over channel"
 date: 2019-12-09
-draft: true
 ---
 
 ## [get pdf here](/gott/episode15.pdf) 🖨
