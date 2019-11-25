@@ -1,6 +1,7 @@
 ---
 title: "#06 - Functions are first-class citizens."
 date: 2019-02-13
+summary: "Let's build a decorator to prove it."
 ---
 
 ## [get pdf here](/gott/episode06.pdf) 🖨

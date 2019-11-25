@@ -1,6 +1,7 @@
 ---
 title: "#11 - Concurrency is not parallelism"
 date: 2019-08-26
+summary: "First two-sides episode!"
 ---
 
 ## [get pdf here](/gott/episode11.pdf) 🖨

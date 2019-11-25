@@ -1,6 +1,7 @@
 ---
 title: "#12 - Select is not only SQL thing"
 date: 2019-10-21
+summary: "The `select` statement in go gives the ability to listen on many channels at the same time."
 ---
 
 ## [get pdf here](/gott/episode12.pdf) 🖨

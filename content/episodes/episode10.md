@@ -1,6 +1,7 @@
 ---
 title: "#10 - Do not communicate by sharing memory; instead, share memory by communicating"
 date: 2019-08-07
+summary: "Said no gopher ever"
 ---
 
 ## [get pdf here](/gott/episode10.pdf) 🖨

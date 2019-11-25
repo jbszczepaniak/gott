@@ -1,6 +1,7 @@
 ---
 title: "#05 - Are there interfaces in go?"
 date: 2019-02-12
+summary: "TLDR;yes"
 ---
 
 ## [get pdf here](/gott/episode05.pdf) 🖨

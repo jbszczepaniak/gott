@@ -1,6 +1,7 @@
 ---
 title: "#03 - You don’t raise or throw exceptions, you return errors"
 date: 2019-01-31
+summary: "In golang errors are normal variables"
 ---
 
 ## [get pdf here](/gott/episode03.pdf) 🖨

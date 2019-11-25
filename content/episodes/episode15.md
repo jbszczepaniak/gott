@@ -1,6 +1,7 @@
 ---
 title: "#15 - Looping over channel"
 date: 2019-12-09
+summary: "Let's find out how it works under the hood."
 ---
 
 ## [get pdf here](/gott/episode15.pdf) 🖨

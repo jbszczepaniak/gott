@@ -1,6 +1,7 @@
 ---
 title: "#02 - There is no finally. In go you defer stuff."
 date: 2019-01-31
+summary: "defer everything"
 ---
 
 ## [get pdf here](/gott/episode02.pdf) 🖨

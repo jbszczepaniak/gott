@@ -1,9 +1,11 @@
 ---
 title: "#13 - About functions implementing interfaces"
 date: 2019-10-22
+summary: "Did you know that any type can implement an interface?"
 ---
 
 ## [get pdf here](/gott/episode13.pdf) 🖨
+
 
 It is commonly known that struct types can implement interfaces, but did you know that any type can implement an interface?
 

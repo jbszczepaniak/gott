@@ -1,6 +1,7 @@
 ---
 title: "#01 - Go gives you static types without bureaucracy!"
 date: 2018-12-30
+summary: "No bureaucracy at all!"
 ---
 
 ## [get pdf here](/gott/episode01.pdf) 🖨

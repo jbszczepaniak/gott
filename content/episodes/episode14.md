@@ -1,6 +1,7 @@
 ---
 title: "#14 - Handling OS signals"
 date: 2019-11-25
+summary: "gracefully"
 ---
 
 ## [get pdf here](/gott/episode14.pdf) 🖨

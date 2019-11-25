@@ -1,6 +1,7 @@
 ---
 title: "#04 - Go is kind of object-oriented."
 date: 2019-01-31
+summary: "Look-n-feel of the struct with function defined on it is class-like."
 ---
 
 ## [get pdf here](/gott/episode04.pdf) 🖨

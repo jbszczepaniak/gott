@@ -1,6 +1,7 @@
 ---
 title: "#09 - Golang wants you to be safe"
 date: 2019-03-24
+summary: "One of the most powerful features of go is it's concurrency model built around goroutines and channels."
 ---
 
 ## [get pdf here](/gott/episode09.pdf) 🖨

@@ -1,6 +1,7 @@
 ---
 title: "#08 - Do you remember January 2nd, 2006?"
 date: 2019-03-06
+summary: "What a day..."
 ---
 
 ## [get pdf here](/gott/episode08.pdf) 🖨
