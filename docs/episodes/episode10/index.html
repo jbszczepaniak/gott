@@ -26,15 +26,13 @@
     
     
     <meta property="og:title" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating" />
-<meta property="og:description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
-Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time." />
+<meta property="og:description" content="Said no gopher ever" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode10/" />
 <meta property="article:published_time" content="2019-08-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-08-07T00:00:00+00:00" />
 <meta itemprop="name" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating">
-<meta itemprop="description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
-Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time.">
+<meta itemprop="description" content="Said no gopher ever">
 
 
 <meta itemprop="datePublished" content="2019-08-07T00:00:00&#43;00:00" />
@@ -46,8 +44,7 @@ Communication by sharing memory means that many goroutines share access to a dat
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="#10 - Do not communicate by sharing memory; instead, share memory by communicating"/>
-<meta name="twitter:description" content="get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
-Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time."/>
+<meta name="twitter:description" content="Said no gopher ever"/>
 
   </head>
 
@@ -58,7 +55,7 @@ Communication by sharing memory means that many goroutines share access to a dat
   
 
   <header>
-    <div class="bg-black">
+    <div class="bg-blue">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://jbszczepaniak.github.io/gott/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -75,6 +72,16 @@ Communication by sharing memory means that many goroutines share access to a dat
 
 
 
+
+<a href="https://github.com/jbszczepaniak/gott" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
 
 
 
@@ -117,24 +124,24 @@ Communication by sharing memory means that many goroutines share access to a dat
 <p>Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time. It turns out we can do better. We can share memory by communicating. &ldquo;Why is it better?&rdquo; you may ask. If you&rsquo;ll think why you need a lock to protect a variable in the first place - the answer is - because it can get changed from many goroutines concurrently. This is where you might end up with data race.
 If a variable is used only in one goroutine there is no possibility to have data races at all because single variable is changed in single goroutine. This is simple, yet powerful insight.</p>
 
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
-    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
-        <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#111">}()</span>
-    <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">)</span>
-<span style="color:#111">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+    ch := <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">int</span>)
+    <span style="color:#6ab825;font-weight:bold">go</span> <span style="color:#6ab825;font-weight:bold">func</span> () {
+        ch &lt;- <span style="color:#3677a9">1</span>
+    }()
+    fmt.<span style="color:#447fcf">Println</span>(&lt;-ch)
+}</code></pre></div>
 
 <p>How do we communicate then? With <strong>channels</strong>!
 Let&rsquo;s have a look at example! Channels are created by calling <code>make</code> function with <code>chan</code> keyword and type for which channel is created. We&rsquo;ve created channel for integers, which means that this channel can convey integer values between goroutines. If you want to send something to channel you use arrow pointing from value to a channel. In the example <code>ch &lt;- 1</code> means <em>&ldquo;send 1 to the channel ch&rdquo;</em>. What is important is that sending to the channel blocks execution of a goroutine. It is blocked as long as someone will receive from the channel from another goroutine. Receiving from the channel is done also with the arrow but pointing from channel, not to it. Receiving operation also blocks execution of goroutine until other goroutine will send to it.</p>
 
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">func</span> <span style="color:#75af00">main</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-    <span style="color:#75af00">ch</span> <span style="color:#f92672">:=</span> <span style="color:#111">make</span><span style="color:#111">(</span><span style="color:#00a8c8">chan</span> <span style="color:#00a8c8">int</span><span style="color:#111">)</span>
-    <span style="color:#75af00">fmt</span><span style="color:#111">.</span><span style="color:#75af00">Println</span><span style="color:#111">(</span><span style="color:#f92672">&lt;-</span><span style="color:#75af00">ch</span><span style="color:#111">)</span>
-    <span style="color:#00a8c8">go</span> <span style="color:#00a8c8">func</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
-        <span style="color:#75af00">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#111">}()</span>
-<span style="color:#111">}</span></code></pre></div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
+    ch := <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">int</span>)
+    fmt.<span style="color:#447fcf">Println</span>(&lt;-ch)
+    <span style="color:#6ab825;font-weight:bold">go</span> <span style="color:#6ab825;font-weight:bold">func</span> () {
+        ch &lt;- <span style="color:#3677a9">1</span>
+    }()
+}</code></pre></div>
 
 <p>To illustrate it let&rsquo;s change order of channel operations and try to run it. What will happen is that runtime will exit with <strong>fatal error: all goroutines are asleep - deadlock</strong>! This happens because when main goroutine encounters receive operation it blocks forever. This is important piece of information for us because now we know that channels are not only used to convey values between goroutines - they are crucial for synchronization between code which concurrently runs in many goroutines.
 This episode just scratched the surface of beautiful go concurrency model. Next time we will explore another type of channels! Stay tuned!</p>
@@ -157,7 +164,7 @@ This episode just scratched the surface of beautiful go concurrency model. Next 
   </article>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    <footer class="bg-blue bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jbszczepaniak.github.io/gott/" >
     &copy; 2019 Go on the toilet
@@ -169,6 +176,16 @@ This episode just scratched the surface of beautiful go concurrency model. Next 
 
 
 
+
+<a href="https://github.com/jbszczepaniak/gott" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
 
 
 

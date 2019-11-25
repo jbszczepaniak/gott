@@ -6,10 +6,19 @@
     <description>Recent content on Go on the toilet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jbszczepaniak.github.io/gott/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#14 - Handling OS signals</title>
+      <link>https://jbszczepaniak.github.io/gott/episodes/episode14/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/episodes/episode14/</guid>
+      <description>gracefully</description>
+    </item>
     
     <item>
       <title>#13 - About functions implementing interfaces</title>
@@ -17,9 +26,7 @@
       <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode13/</guid>
-      <description>get pdf here 🖨 It is commonly known that struct types can implement interfaces, but did you know that any type can implement an interface?
-An interface used when working with HTTP servers is Handler. It has one method ServeHTTP and every struct implementing this interface can be registered as a handler for incoming HTTP requests. This is simple implementation of Handler interface.
-type helloServer struct{} func (s helloServer) ServeHTTP(w http.</description>
+      <description>Did you know that any type can implement an interface?</description>
     </item>
     
     <item>
@@ -28,8 +35,7 @@ type helloServer struct{} func (s helloServer) ServeHTTP(w http.</description>
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode12/</guid>
-      <description>get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&amp;rsquo;s have a look.
-func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &amp;lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &amp;lt;-ch: fmt.Printf(&amp;#34;received %d on channel 1&amp;#34;, v) case v := &amp;lt;-ch2: fmt.Printf(&amp;#34;received %d on channel 2&amp;#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received.</description>
+      <description>The &lt;code&gt;select&lt;/code&gt; statement in go gives the ability to listen on many channels at the same time.</description>
     </item>
     
     <item>
@@ -38,8 +44,7 @@ func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &amp;lt;
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode11/</guid>
-      <description>get pdf here 🖨 Left side ① I hope you&amp;rsquo;ve started reading right here. This is the beginning of this episode. Let&amp;rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &amp;ldquo;at the same time&amp;rdquo;. →②
-③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time.</description>
+      <description>First two-sides episode!</description>
     </item>
     
     <item>
@@ -48,8 +53,7 @@ func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &amp;lt;
       <pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode10/</guid>
-      <description>get pdf here 🖨 This is one of golang&amp;rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
-Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&amp;rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time.</description>
+      <description>Said no gopher ever</description>
     </item>
     
     <item>
@@ -58,8 +62,7 @@ Communication by sharing memory means that many goroutines share access to a dat
       <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode09/</guid>
-      <description>get pdf here 🖨 One of the most powerful features of go is it&amp;rsquo;s concurrency model built around goroutines and channels. Goroutine is a lightweight thread managed by the Go runtime. Channel enables unidirectional communication between goroutines. If you want to know more about channels and goroutines, stay tuned - in upcoming episodes we will take a closer look at them.
-One of the problems with concurrent programming is a data race.</description>
+      <description>One of the most powerful features of go is it&amp;rsquo;s concurrency model built around goroutines and channels.</description>
     </item>
     
     <item>
@@ -68,8 +71,7 @@ One of the problems with concurrent programming is a data race.</description>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode08/</guid>
-      <description>get pdf here 🖨 I don&amp;rsquo;t, but golang certainly cares about it. Let&amp;rsquo;s say you want to convert a string to Time struct. You want to figure out how, you open your terminal and type $ go doc time parse, and this is what you get:
-func Parse(layout, value string) (Time, error) Parse parses a formatted string and returns the time value it represents. The layout defines the format by showing how the reference time, defined to be Mon Jan 2 15:04:05 -0700 MST 2006 would be interpreted if it were the value; .</description>
+      <description>What a day&amp;hellip;</description>
     </item>
     
     <item>
@@ -87,8 +89,7 @@ func Parse(layout, value string) (Time, error) Parse parses a formatted string a
       <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode06/</guid>
-      <description>get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
-func logged(f func(int) int) func(int) int { return func(i int) int { fmt.</description>
+      <description>Let&amp;rsquo;s build a decorator to prove it.</description>
     </item>
     
     <item>
@@ -97,10 +98,7 @@ func logged(f func(int) int) func(int) int { return func(i int) int { fmt.</desc
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode05/</guid>
-      <description>get pdf here 🖨 Sure, let’s look at one:
-type Writer interface { Write(p []byte) (n int, err error) } This is Writer type from standard library (from io package). If you want to implement such interface, you need to have struct with function Write defined on this struct.
-Let’s write some dummy implementation of this interface.
-type DummyWriter struct {} func (dw DummyWriter) Write (p []byte) (int, error) { return 0, nil } Here we have completely valid and extremely useless Writer implementation.</description>
+      <description>TLDR;yes</description>
     </item>
     
     <item>
@@ -109,9 +107,7 @@ type DummyWriter struct {} func (dw DummyWriter) Write (p []byte) (int, error) {
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode02/</guid>
-      <description>get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
-Examples from Docker project:
-defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d.</description>
+      <description>defer everything</description>
     </item>
     
     <item>
@@ -120,9 +116,7 @@ defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock(
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode03/</guid>
-      <description>get pdf here 🖨 There is a lot of code blocks like this in go:
-fileInfo, err := os.Stat(filename) if err != nil { return fmt.Errorf(&amp;#34;could not stat file, err: %v&amp;#34;, err) } Each time you encounter a possibility of error you handle it immediately. You return it and let caller deal with it or you just log it and move on.
-In golang errors are normal variables, ​error ​type is an interface with single method ​Error()​.</description>
+      <description>In golang errors are normal variables</description>
     </item>
     
     <item>
@@ -131,8 +125,7 @@ In golang errors are normal variables, ​error ​type is an interface with sin
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode04/</guid>
-      <description>get pdf here 🖨 type HealthCheck struct { Interval time.Duration Healthy bool } func (hc HealthCheck) isHealthy() bool { return hc.Healthy } Above you have what you could call a class. It is a struct though with function defined on it.
-check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;amp;HealthCheck{1*time.Second, true} Look-n-feel of the struct with function defined on it is class-like. You use it as object just like in other languages.</description>
+      <description>Look-n-feel of the struct with function defined on it is class-like.</description>
     </item>
     
     <item>
@@ -141,7 +134,7 @@ check := HealthCheck{ Interval: 2*time.Second, Healthy: true, } check2 := &amp;a
       <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://jbszczepaniak.github.io/gott/episodes/episode01/</guid>
-      <description>get pdf here 🖨 package main func main() { var i int = 1 // you can declare a variable with type  var j = 2 // but you don’t have to, compiler will know  var x, y, z = &amp;#34;three&amp;#34;, &amp;#34;at&amp;#34;, &amp;#34;once&amp;#34; // you can initialize many variables at a time  // Most probably you will not frequently use var keyword.  simplestInt := 3 simplestString := &amp;#34;hey!</description>
+      <description>No bureaucracy at all!</description>
     </item>
     
   </channel>

@@ -31,17 +31,17 @@
     
     
     <meta property="og:title" content="Episodes" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/" />
 
-<meta property="og:updated_time" content="2019-10-22T00:00:00+00:00" />
+<meta property="og:updated_time" content="2019-11-25T00:00:00+00:00" />
 <meta itemprop="name" content="Episodes">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Episodes"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
   </head>
 
@@ -50,7 +50,7 @@
     
 
   <header>
-    <div class="pb3-m pb6-l bg-black">
+    <div class="pb3-m pb6-l bg-blue">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://jbszczepaniak.github.io/gott/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -67,6 +67,16 @@
 
 
 
+
+<a href="https://github.com/jbszczepaniak/gott" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
 
 
 
@@ -97,14 +107,27 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Episodes</span>
     <h1 class="f3 near-black">
+      <a href="https://jbszczepaniak.github.io/gott/episodes/episode14/" class="link black dim">
+        #14 - Handling OS signals
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      gracefully
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Episodes</span>
+    <h1 class="f3 near-black">
       <a href="https://jbszczepaniak.github.io/gott/episodes/episode13/" class="link black dim">
         #13 - About functions implementing interfaces
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 It is commonly known that struct types can implement interfaces, but did you know that any type can implement an interface?
-An interface used when working with HTTP servers is Handler. It has one method ServeHTTP and every struct implementing this interface can be registered as a handler for incoming HTTP requests. This is simple implementation of Handler interface.
-type helloServer struct{} func (s helloServer) ServeHTTP(w http.
+      Did you know that any type can implement an interface?
     </div>
   </div>
 </div>
@@ -119,8 +142,7 @@ type helloServer struct{} func (s helloServer) ServeHTTP(w http.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 The select statement in go gives the ability to listen on many channels at the same time. Let&rsquo;s have a look.
-func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 }() // sending on separate goroutine to avoid deadlock  select { case v := &lt;-ch: fmt.Printf(&#34;received %d on channel 1&#34;, v) case v := &lt;-ch2: fmt.Printf(&#34;received %d on channel 2&#34;, v) } } This piece of code executes only the first case statement because only the first channel has something that can be received.
+      The <code>select</code> statement in go gives the ability to listen on many channels at the same time.
     </div>
   </div>
 </div>
@@ -135,8 +157,7 @@ func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 Left side ① I hope you&rsquo;ve started reading right here. This is the beginning of this episode. Let&rsquo;s get started with acknowledgment that both parallelism and concurrency deal with the same domain of doing many things &ldquo;at the same time&rdquo;. →②
-③ This is concurrent work in action. You are reading two things at the same time, but you can be focused only on one of them at the time.
+      First two-sides episode!
     </div>
   </div>
 </div>
@@ -151,8 +172,7 @@ func main() { ch := make(chan int) ch2 := make(chan int) go func() { ch &lt;- 1 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 This is one of golang&rsquo;s proverbs. Impact of this sentence is bigger than you might think. What does it even mean? It has a meaning only in a concurrent program where separate goroutines want to share information between each other.
-Communication by sharing memory means that many goroutines share access to a data structure (which needs a lock protection). This isn&rsquo;t so bad, right? We are used to it, we do this kind of sharing all the time.
+      Said no gopher ever
     </div>
   </div>
 </div>
@@ -167,8 +187,7 @@ Communication by sharing memory means that many goroutines share access to a dat
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 One of the most powerful features of go is it&rsquo;s concurrency model built around goroutines and channels. Goroutine is a lightweight thread managed by the Go runtime. Channel enables unidirectional communication between goroutines. If you want to know more about channels and goroutines, stay tuned - in upcoming episodes we will take a closer look at them.
-One of the problems with concurrent programming is a data race.
+      One of the most powerful features of go is it&rsquo;s concurrency model built around goroutines and channels.
     </div>
   </div>
 </div>
@@ -183,8 +202,7 @@ One of the problems with concurrent programming is a data race.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 I don&rsquo;t, but golang certainly cares about it. Let&rsquo;s say you want to convert a string to Time struct. You want to figure out how, you open your terminal and type $ go doc time parse, and this is what you get:
-func Parse(layout, value string) (Time, error) Parse parses a formatted string and returns the time value it represents. The layout defines the format by showing how the reference time, defined to be Mon Jan 2 15:04:05 -0700 MST 2006 would be interpreted if it were the value; .
+      What a day&hellip;
     </div>
   </div>
 </div>
@@ -214,8 +232,7 @@ func Parse(layout, value string) (Time, error) Parse parses a formatted string a
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 This property has some interesting consequences (we will show 4 of them). Thanks to it you can accept function as an argument to the function and return a function from a function. Because of this we can implement the decorator pattern. Here is one that logs the fact that function started and finished.
-func logged(f func(int) int) func(int) int { return func(i int) int { fmt.
+      Let&rsquo;s build a decorator to prove it.
     </div>
   </div>
 </div>
@@ -230,27 +247,7 @@ func logged(f func(int) int) func(int) int { return func(i int) int { fmt.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 Sure, let’s look at one:
-type Writer interface { Write(p []byte) (n int, err error) } This is Writer type from standard library (from io package). If you want to implement such interface, you need to have struct with function Write defined on this struct.
-Let’s write some dummy implementation of this interface.
-type DummyWriter struct {} func (dw DummyWriter) Write (p []byte) (int, error) { return 0, nil } Here we have completely valid and extremely useless Writer implementation.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Episodes</span>
-    <h1 class="f3 near-black">
-      <a href="https://jbszczepaniak.github.io/gott/episodes/episode02/" class="link black dim">
-        #02 - There is no finally. In go you defer stuff.
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      get pdf here 🖨 If you want to make sure that something will happen, in go you can use defer. Statement marked with defer will be called at the end of enclosing function.
-Examples from Docker project:
-defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock() // make sure to release acquired lock  defer f.Close() // close file after reading content  defer body.Close() // close HTTP response body after reading content  defer d.
+      TLDR;yes
     </div>
   </div>
 </div>
@@ -305,7 +302,7 @@ defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock(
 </article>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+    <footer class="bg-blue bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jbszczepaniak.github.io/gott/" >
     &copy; 2019 Go on the toilet
@@ -317,6 +314,16 @@ defer os.RemoveAll(tmp) // inside test as clean-up step  defer ls.mountL.Unlock(
 
 
 
+
+<a href="https://github.com/jbszczepaniak/gott" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
 
 
 
