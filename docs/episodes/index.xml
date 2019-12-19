@@ -6,10 +6,19 @@
     <description>Recent content in Episodes on Go on the toilet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jbszczepaniak.github.io/gott/episodes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#15 - Looping over channel</title>
+      <link>https://jbszczepaniak.github.io/gott/episodes/episode15/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/episodes/episode15/</guid>
+      <description>Let&amp;rsquo;s find out how it works under the hood.</description>
+    </item>
     
     <item>
       <title>#14 - Handling OS signals</title>
