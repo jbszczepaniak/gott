@@ -6,10 +6,19 @@
     <description>Recent content in Episodes on Go on the toilet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jbszczepaniak.github.io/gott/episodes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#16 - Optional parameters</title>
+      <link>https://jbszczepaniak.github.io/gott/episodes/episode16/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbszczepaniak.github.io/gott/episodes/episode16/</guid>
+      <description>They exist.</description>
+    </item>
     
     <item>
       <title>#15 - Looping over channel</title>

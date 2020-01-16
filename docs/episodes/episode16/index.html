@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Go on the toilet  | #14 - Handling OS signals</title>
+    <title>Go on the toilet  | #16 - Optional parameters</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.58.3" />
     
@@ -25,26 +25,26 @@
 
     
     
-    <meta property="og:title" content="#14 - Handling OS signals" />
-<meta property="og:description" content="gracefully" />
+    <meta property="og:title" content="#16 - Optional parameters" />
+<meta property="og:description" content="They exist." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode14/" />
-<meta property="article:published_time" content="2019-11-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-11-25T00:00:00+00:00" />
-<meta itemprop="name" content="#14 - Handling OS signals">
-<meta itemprop="description" content="gracefully">
+<meta property="og:url" content="https://jbszczepaniak.github.io/gott/episodes/episode16/" />
+<meta property="article:published_time" content="2020-01-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-16T00:00:00+00:00" />
+<meta itemprop="name" content="#16 - Optional parameters">
+<meta itemprop="description" content="They exist.">
 
 
-<meta itemprop="datePublished" content="2019-11-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-11-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="280">
+<meta itemprop="datePublished" content="2020-01-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="240">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="#14 - Handling OS signals"/>
-<meta name="twitter:description" content="gracefully"/>
+<meta name="twitter:title" content="#16 - Optional parameters"/>
+<meta name="twitter:description" content="They exist."/>
 
   </head>
 
@@ -117,47 +117,64 @@
           
         EPISODES
       </p>
-      <h1 class="f1 athelas mb1">#14 - Handling OS signals</h1>
+      <h1 class="f1 athelas mb1">#16 - Optional parameters</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2019-11-25T00:00:00Z">November 25, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-01-16T00:00:00Z">January 16, 2020</time>
       
       
     </header>
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
-<h2 id="get-pdf-here-gott-episode14-pdf"><a href="/gott/episode14.pdf">get pdf here</a> 🖨</h2>
+<h2 id="get-pdf-here-gott-episode16-pdf"><a href="/gott/episode16.pdf">get pdf here</a> 🖨</h2>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {
-    sigs := <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">chan</span> os.Signal, <span style="color:#3677a9">1</span>)
-    exit := <span style="color:#24909d">make</span>(<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">struct</span>{})
-    signal.<span style="color:#447fcf">Notify</span>(sigs, syscall.SIGTERM, syscall.SIGHUP)
+<p>Java offers type overloading. In Python keyword arguments can be passed to functions. Go doesn&rsquo;t allow either, yet passing optional arguments to the function can be handy from time to time. Let&rsquo;s see how this can be achieved with Go&rsquo;s type system. We will create some sort of <code>Client​</code> without a need to pass the parameters.</p>
 
-    <span style="color:#6ab825;font-weight:bold">go</span> <span style="color:#6ab825;font-weight:bold">func</span>() {
-        <span style="color:#6ab825;font-weight:bold">for</span> {
-            <span style="color:#6ab825;font-weight:bold">switch</span> &lt;-sigs {
-            <span style="color:#6ab825;font-weight:bold">case</span> syscall.SIGTERM:
-                fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;\rcleaning up and exiting&#34;</span>)
-                <span style="color:#447fcf">cleanup</span>()
-                exit &lt;- <span style="color:#6ab825;font-weight:bold">struct</span>{}{}
-            <span style="color:#6ab825;font-weight:bold">case</span> syscall.SIGHUP: 
-                fmt.<span style="color:#447fcf">Println</span>(<span style="color:#ed9d13">&#34;\rreloading configuration&#34;</span>)
-                <span style="color:#447fcf">reload</span>() 
-            }
-        }
-    }()
-    <span style="color:#999;font-style:italic">// something useful going on here
-</span><span style="color:#999;font-style:italic"></span>    &lt;-exit 
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">type</span> Client <span style="color:#6ab825;font-weight:bold">struct</span> {
+  Insecure <span style="color:#6ab825;font-weight:bold">bool</span>
+  Timeout <span style="color:#6ab825;font-weight:bold">int</span>
+}
+
+<span style="color:#999;font-style:italic">// Set of Options like that will be applied to the Client.
+</span><span style="color:#999;font-style:italic">// Since function receives pointer as a parameter it can
+</span><span style="color:#999;font-style:italic">// change Client&#39;s state.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">type</span> Option <span style="color:#6ab825;font-weight:bold">func</span>(*Client)
+
+<span style="color:#999;font-style:italic">// Return an anonymous function of type Option, that
+</span><span style="color:#999;font-style:italic">// changes value of `Insecure` field on the Client.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">AllowInsecure</span>() Option { <span style="color:#a61717;background-color:#e3d2d2">​</span>
+  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">func</span>(c *Client) { <span style="color:#a61717;background-color:#e3d2d2">​</span>
+    c.Insecure = <span style="color:#6ab825;font-weight:bold">true</span>
+  }
+}
+
+<span style="color:#999;font-style:italic">// Do the same here, but this time pass a timeout parameter.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">WithTimeout</span>(timeout <span style="color:#6ab825;font-weight:bold">int</span>) Option { <span style="color:#a61717;background-color:#e3d2d2">​</span>
+  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">func</span>(c *Client) { <span style="color:#a61717;background-color:#e3d2d2">​</span>
+    c.Timeout = timeout
+  }
+}
+
+
+<span style="color:#999;font-style:italic">// Here magic happens. The `constructor` accepts 0 or many Options
+</span><span style="color:#999;font-style:italic">// (which are functions). Then it creates new client, loops over
+</span><span style="color:#999;font-style:italic">// the Options and apply them by invoking them.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">NewClient</span>(opts... Option) *Client {
+  c := &amp;Client{}
+  <span style="color:#6ab825;font-weight:bold">for</span> _, opt := <span style="color:#6ab825;font-weight:bold">range</span> opts {<span style="color:#a61717;background-color:#e3d2d2">​</span>
+    <span style="color:#447fcf">opt</span>(c)
+  }
+  <span style="color:#6ab825;font-weight:bold">return</span> c
+}
+
+<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">main</span>() {}
+  <span style="color:#999;font-style:italic">// New Client with default parameters.
+</span><span style="color:#999;font-style:italic"></span>  t1 := <span style="color:#447fcf">NewClient</span>()
+  <span style="color:#999;font-style:italic">// New Client that allows insecure connections
+</span><span style="color:#999;font-style:italic"></span>  <span style="color:#999;font-style:italic">// and have connection timeout 10s.
+</span><span style="color:#999;font-style:italic"></span>  t2 := <span style="color:#447fcf">NewClient</span>(<span style="color:#447fcf">AllowInsecure</span>(), <span style="color:#447fcf">WithTimeout</span>(<span style="color:#3677a9">10</span>))
 }</code></pre></div>
-
-<p>Fundamental building block of signal handling is <code>Notify</code> function in the <code>signal</code> package. It accepts channel of <code>os.signal</code>, and signals which will be relayed to that channel. What we do here is we listen to <strong>SIGTERM</strong> and <strong>SIGHUP</strong> signals. <strong>SIGTERM</strong> is a termination signal sent by kill command by default. <strong>SIGHUP</strong> is the hang up signal which in the early days (according to wikipedia) was used to inform the process that connection on the serial line with terminal on the other end was dropped. These days long running applications (aka daemons) like nginx or docker use it to tell the process &ldquo;reload your config&rdquo;.</p>
-
-<p>We don&rsquo;t listen to other signals here. For example sending <strong>SIGINT</strong> (ctrl+c) to the process will not be caught by our code and will be handled in the usual way.</p>
-
-<p>Note that <code>sigs</code> channel has single element buffer. According to the documentation you can have any buffer size you want. Only limitation is that if the rate of incoming signals is higher than buffer size you might lose some signals. Example here would be that if <code>reload()</code> takes 3 seconds, and process will receive immediately <strong>SIGHUP</strong>, <strong>SIGHUP</strong> and <strong>SIGTERM</strong> signals, termination signal might get lost.</p>
-
-<p>Last but not least, catching signals is happening in a different goroutine because we don&rsquo;t want to block anything useful (for example, running in a foreground HTTP service).</p>
 <ul class="pa0">
   
 </ul>
