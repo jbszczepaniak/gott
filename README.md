@@ -1,1 +1,1 @@
-# [Go on the toilet](jbszczepaniak.github.io/gott)
+# [Go on the toilet](https://jbszczepaniak.github.io/gott/)
